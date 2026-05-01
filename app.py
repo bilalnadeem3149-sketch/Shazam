@@ -129,7 +129,7 @@ def format_message(record):
 <blockquote>📩 Full-Message:</blockquote>
 <pre>{msg}</pre>
 
-Powered By LEADER SHAH 
+Powered By SHAZAM KING 👑 
 """
 
 async def send_otp_message(record):
@@ -139,7 +139,7 @@ async def send_otp_message(record):
             [InlineKeyboardButton("📢 Channel", url="https://t.me/metatechc1"),
              InlineKeyboardButton("🔢 Numbers", url="https://t.me/metaotpgc")],
             [InlineKeyboardButton("👨‍💻 Developer", url="https://t.me/dev_shazam"),
-             InlineKeyboardButton("🟢 WhatsApp", url="https://whatsapp.com/channel/0029VbC0Gcs0G0XZqgIYFL01")]
+             InlineKeyboardButton("🟢 WhatsApp", url="https://whatsapp.com/channel/0029VbBRSOALikg4s32Dp70c")]
         ])
         await bot.send_message(chat_id=GROUP_ID, text=message, parse_mode="HTML", reply_markup=keyboard)
         print(f"[{datetime.now()}] Sent OTP from {record['number']}")
