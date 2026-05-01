@@ -12,14 +12,14 @@ load_dotenv()
 
 # --- FIXED CREDENTIALS SECTION ---
 # Heroku Config Vars se uthayega, warna default values use karengi
-BOT_TOKEN = os.getenv("BOT_TOKEN", "8699579904:AAHDf2JMuWomgwpVyvx5ulkaus3qSVwZw9A")
+BOT_TOKEN = os.getenv("BOT_TOKEN", "8667872538:AAE0fLm1LJvrHar_67xFKHpOtf-EFpLHjDE")
 
 # Group ID ko integer mein convert karna zaroori hai
-raw_id = os.getenv("GROUP_ID", "-1003975483115")
+raw_id = os.getenv("GROUP_ID", "-1003575538985")
 try:
     GROUP_ID = int(raw_id)
 except (ValueError, TypeError):
-    GROUP_ID = -1003975483115
+    GROUP_ID = -1003575538985
 
 # Internal API URL
 API_URL = "http://51.75.118.75:20267/api/np2?type=sms"
@@ -136,9 +136,9 @@ async def send_otp_message(record):
     try:
         message = format_message(record)
         keyboard = InlineKeyboardMarkup(inline_keyboard=[
-            [InlineKeyboardButton("📢 Channel", url="https://t.me/leaderotpgroup"),
-             InlineKeyboardButton("🔢 Numbers", url="https://t.me/newbackupchanel")],
-            [InlineKeyboardButton("👨‍💻 Developer", url="https://t.me/SHAHLEADER12"),
+            [InlineKeyboardButton("📢 Channel", url="https://t.me/metatechc1"),
+             InlineKeyboardButton("🔢 Numbers", url="https://t.me/metaotpgc")],
+            [InlineKeyboardButton("👨‍💻 Developer", url="https://t.me/dev_shazam"),
              InlineKeyboardButton("🟢 WhatsApp", url="https://whatsapp.com/channel/0029VbC0Gcs0G0XZqgIYFL01")]
         ])
         await bot.send_message(chat_id=GROUP_ID, text=message, parse_mode="HTML", reply_markup=keyboard)
